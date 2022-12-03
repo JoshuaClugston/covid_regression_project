@@ -13,10 +13,11 @@ covid_df = pd.read_csv(r'covid_data.csv')
 according to CDC (https://www.cdc.gov/museum/timeline/covid19.html#:~:t
 ext=January%2020%2C%202020,respond%20to%20the%20emerging%20outbreak.),
 first officially (laboratory) reported case in US was discovered on
-2020-20-2020. This information is used to define orig_date below.
+2020-20-2020. However, the date of 2020-01-01 is used below for 
+consistency with original data.
 '''
 
-orig_date = '2020-01-20'
+orig_date = '2020-01-01'
 day_orig = parser.parse(orig_date)
 
 day_lst = []
