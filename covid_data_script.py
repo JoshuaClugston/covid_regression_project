@@ -32,21 +32,3 @@ for ind in covid_df.index:
 
 covid_df['State of emergency declared'] = day_lst
 covid_df.to_csv('covid_data_updated.csv')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
