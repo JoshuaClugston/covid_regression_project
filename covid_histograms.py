@@ -14,5 +14,5 @@ for column in covid_df.columns:
     plt.ylabel('Frequency')
     plt.title(f'Histogram for {column}')
     column_name = column.replace(' ', '')
-    plt.savefig(f'hist_img/{column_name}')
+    plt.savefig(f'hist_img/{column_name}', bbox_inches='tight')
     plt.show()
