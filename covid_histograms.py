@@ -12,6 +12,6 @@ os.mkdir('hist_img/')
 for column in covid_df.columns:
     sns.displot(data=covid_df[column], kde=True, color='red')
     plt.title(f'Histogram for {column}')
-    column_name = column.string()
+    column_name = column.replace(' ', '')
     plt.savefig(f'hist_img/{column_name}')
     plt.show()
