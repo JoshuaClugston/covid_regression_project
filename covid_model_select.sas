@@ -105,8 +105,12 @@ model Total_Deaths = Total_Cases Population PopulationWeighted_Density
 	  Avge_Spring_Temp Avge_Spring_Precip relative_humidity_morning 
 	  relative_humidity_afternoon UV_index
 	  / clb clm cli r;
+output out=residout predicted=pred rstudent=resid;
 run;
 
+proc univariate data=residout normal;
+var resid;
+run;
 
 proc reg data=covid plots=(diagnostics(stats=all) fit(stats=(aic sbc)));
 title 'Fitting stepwise AIC Selected Model';
