@@ -107,10 +107,10 @@ model Total_Deaths = Total_Cases Population PopulationWeighted_Density
 	  / clb clm cli r;
 run;
 
-/*Get rid of insignificant variables in the above */
 
 proc reg data=covid plots=(diagnostics(stats=all) fit(stats=(aic sbc)));
-title 'Fitting LASSO AIC Selected Model Without Insignificant Variables';
+title 'Fitting stepwise AIC Selected Model';
 model Total_Deaths = Total_Cases Population PopulationWeighted_Density 
-	  Avge_Spring_Temp/ clb clm cli r;
+	  Race_param_2 Average_Relative_Humidity Avge_Spring_Temp
+	  / clb clm cli r;
 run;
