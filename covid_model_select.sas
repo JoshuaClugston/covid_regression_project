@@ -1,7 +1,7 @@
 data covid;
 title 'COVID-19 Data for all 50 U.S. States';
 infile 'covid_data_updated.csv' firstobs=2 dlm = ',';
-input obs State :$13. Population PopulationWeighted_Density Total_Cases Total_Deaths
+input obs State :$13. Total_Cases Total_Deaths Population PopulationWeighted_Density
 	  retail grocery parks transit workplaces residential age low_indust_toxins
 	  low_pollution_health_risk Chron_Low_Resp_Death_Rate age_65_years_and_over
 	  Race_param_1 Race_param_2 Race_param_3 Race_param_4 Obesity_Rates 
