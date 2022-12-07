@@ -104,7 +104,7 @@ model Total_Deaths = Total_Cases Population PopulationWeighted_Density
 	  Average_Annual_Percipitation_mm State_of_emergency_declared 
 	  Avge_Spring_Temp Avge_Spring_Precip relative_humidity_morning 
 	  relative_humidity_afternoon UV_index
-	  / clb clm cli r;
+	  / clb clm cli r  tol vif;
 output out=residout predicted=pred rstudent=resid;
 run;
 
